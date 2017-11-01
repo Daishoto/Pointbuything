@@ -5,23 +5,34 @@ SwingBuilder.build() {
     frame(title:'Pointy', size:[300,400],
         visible:true, defaultCloseOperation:WC.EXIT_ON_CLOSE) {
         gridLayout(cols: 1, rows: 0)
-                    label 'Strength: '
-        input = textField(columns:2, 
-            actionPerformed: { output.text = input.text })
-			        label 'Dexterity: '
-        input = textField(columns:2, 
-            actionPerformed: { output.text = input.text })
-			        label 'constitution: '
-        input = textField(columns:2, 
-            actionPerformed: { output.text = input.text })
-			        label 'Intelligence: '
-        input = textField(columns:2, 
-            actionPerformed: { output.text = input.text })
-			        label 'Wisdom: '
-        input = textField(columns:2, 
-            actionPerformed: { output.text = input.text })
-			        label 'Charisma: '
-        input = textField(columns:2, 
-            actionPerformed: { output.text = input.text })
-    }
+		 		 		 SwingBuilder swing = new SwingBuilder()
+		         swing.actions() {
+				 			         label (text : 'Total available points:')
+            spinner(id:'sp', model:spinnerNumberModel(minimum:0, maximum:46, stepSize:1, value:27))
+        }
+		         swing.actions() {
+				 			         label (text : 'STR:')
+            spinner(id:'sp', model:spinnerNumberModel(minimum:8, maximum:15, stepSize:1, value:8))
+        }
+		         swing.actions() {
+				 			         label (text : 'DEX:')
+            spinner(id:'sp', model:spinnerNumberModel(minimum:8, maximum:15, stepSize:1, value:8))
+        }
+		         swing.actions() {
+				 			         label (text : 'CON:')
+            spinner(id:'sp', model:spinnerNumberModel(minimum:8, maximum:15, stepSize:1, value:8))
+        }
+		         swing.actions() {
+				 			         label (text : 'INT:')
+            spinner(id:'sp', model:spinnerNumberModel(minimum:8, maximum:15, stepSize:1, value:8))
+        }
+		         swing.actions() {
+				 			         label (text : 'WIS:')
+            spinner(id:'sp', model:spinnerNumberModel(minimum:8, maximum:15, stepSize:1, value:8))
+        }
+		         swing.actions() {
+				 			         label (text : 'CHA:')
+            spinner(id:'sp', model:spinnerNumberModel(minimum:8, maximum:15, stepSize:1, value:8))
+        }
+}
 }
